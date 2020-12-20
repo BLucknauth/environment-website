@@ -1,0 +1,210 @@
+@font-face {
+	font-family: 'Raleway'; 
+	src: 
+	url('source/Raleway-ExtraLight.woff'),
+	url('source/Raleway-ExtraLight.ttf'),
+	url('source/Raleway-ExtraLight.otf');
+}
+
+body{
+	font-family:'Raleway', sans-serif; 
+}
+
+header {
+	font-family:'Raleway', sans-serif; 
+	font-size: .75em;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+}
+
+#earthLeft {
+	width: 52px;
+	height: 51px;
+	float: left;
+	
+	display: block;
+	margin: auto;
+}
+
+#earthRight {
+	width: 52px;
+	height: 51px;
+	float: right;
+
+	display: block;
+	margin: auto;
+}
+
+nav {
+	display:flex;
+	width: 100%;
+	height: auto;
+
+	position: -webkit-sticky;
+	margin: 0;
+	padding: 0;
+
+	background-color: #1c6100;
+	font-family:'Raleway', sans-serif; 
+	font-size: 1em;
+	color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav > a {
+	justify-content: space-around;
+	margin: auto;
+}
+
+nav > a:link {
+	color: white; 
+	text-decoration: none;
+}
+
+nav > a:visited {
+	color: #d1fcff;
+}
+
+nav > a:active {
+	color: #ffddb0;
+}
+
+nav > a:hover {
+	text-decoration: underline;
+}
+
+h2 {
+	text-align: center;
+	margin: .25em .25em 0em .25em;
+	padding: 0em 0em 0em 0em;
+}
+
+article {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+article > img {
+	max-width: 100%;
+	height: auto;
+}
+
+a:link {
+	color: #1c6100; 
+	text-decoration: none;
+}
+
+a:visited {
+	color: #001d9c;
+}
+
+a:active {
+	color: #8097fd;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	font-family:'Raleway', sans-serif; 
+	font-size: 1em;
+}
+
+video {
+	max-width: 100%;
+	height: auto;
+
+	display: block;
+	margin: auto;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+footer {
+	text-align: center;
+	background-color: #1c6100;
+}
+
+footer > a:link {
+	color: white; 
+	text-decoration: none;
+}
+
+footer > a:visited {
+	color: #d1fcff;
+}
+
+footer > a:active {
+	color: #ffddb0;
+}
+
+footer > a:hover {
+	text-decoration: underline;
+}
+
+@media (min-width: 960px) {
+	header {
+		font-size: 1em;
+	}
+	article {
+		display: grid;
+
+		grid-template-columns: 1fr 1.333fr 1fr;
+		grid-template-rows: auto;
+		margin-bottom: 20px;
+	}
+
+	article > p {
+		margin: 10px 10px 10px 10px;
+	}
+
+	.textFirst {
+/*		grid-column: 1; 
+		grid-row: 1 / span;*/
+		grid-area: a;
+	}
+
+	.picture {
+		grid-area: b;
+
+	}
+
+	.textSecond {
+		grid-area: c;
+	}
+
+
+	#you > img {
+		display: block;
+		max-width: 500px;
+		height: auto;
+		margin: auto;
+	}
+
+	#you {
+		display: grid;
+
+		grid-template-columns: 1fr 1.333fr 1fr;
+		grid-template-areas: 
+
+		'a . c'
+		'a b c'
+		'a . c';
+	}
+
+
+}
